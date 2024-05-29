@@ -1,0 +1,40 @@
+<div class="img-backgr">
+  <div class="content">
+    <div class="container " id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <img src="../../../../assets/image/logoKTDN.webp" alt="logoDHKTDN" class="img-kt" style="width: 100px;">
+          <h2 class="login-header">ĐĂNG KÝ</h2>
+          <input type="text" placeholder="Username" [(ngModel)]="registerForm.username" name="username" />
+          <input type="email" placeholder="Email" [(ngModel)]="registerForm.email" name="email" />
+          <input type="password" placeholder="Password" [(ngModel)]="registerForm.password" name="password" />
+          <button (click)="register()">ĐĂNG KÝ</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <img src="../../../../assets/image/logoKTDN.webp" alt="logoDHKTDN" class="img-kt" style="width: 100px;">
+          <h2 class="login-header">ĐĂNG NHẬP</h2>
+          <input type="text" placeholder="Username" [(ngModel)]="loginForm.username" name="username" />
+          <input type="password" placeholder="Password" [(ngModel)]="loginForm.password" name="password" />
+          <a href="javascript:void(0)">Forgot your password?</a>
+          <button (click)="login()">ĐĂNG NHẬP</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay ">
+          <div class="overlay-panel overlay-left ">
+            <h1>Welcome Back!</h1>
+            <p>Để duy trì kết nối với chúng tôi vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+            <button class="ghost" id="signIn" (click)="loginFormChange()">Đăng nhập</button>
+          </div>
+          <div class="overlay-panel overlay-right ">
+            <h1>Hello, Friend!</h1>
+            <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+            <button class="ghost" id="signUp" (click)="registerFormChange()">Đăng ký</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
